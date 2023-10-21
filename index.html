@@ -1,1 +1,41 @@
-<A HREF="mailto:shreyasskudupi@gmail.com?Subject=Seeking%20Travel%20Guidance%20in%20South%20Karnataka&Body=Dear%20Shreyas%2C%0A%0AI%20hope%20this%20email%20finds%20you%20well.%20I%20was%20referred%20to%20you%20by%20our%20mutual%20friend%2C%20Suhas%20Nayak%2C%20who%20couldn%27t%20speak%20highly%20enough%20of%20your%20expertise%20in%20this%20area.">linkText</A>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #email-button {
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #email-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="email-button">Contact Shreyas</button>
+
+    <script>
+        document.getElementById('email-button').addEventListener('click', function() {
+            const email = "shreyasskudupi@gmail.com";
+            const subject = "Request for Travel Guidance";
+            const body = "Hello Shreyas,\n\nI hope this message finds you well. I am planning a trip to South Karnataka and was referred to you by Suhas Nayak. I would greatly appreciate your guidance and recommendations for this journey.\n\nThank you for your help.\n\nSincerely, [Your Name]";
+
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>
